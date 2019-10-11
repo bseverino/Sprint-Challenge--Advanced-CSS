@@ -1,1 +1,33 @@
 // Navigation code here
+
+nav {
+    .flex();
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: fade(@nav-bg, 90%);
+        border-bottom: 1px solid @nav-border;
+
+        h1 {
+            padding: 1vh 0;
+        } // h1
+
+        .nav-bar {
+            .flex(row, space-between, center);
+            width: 30%;
+            padding: 1.5vh 0;
+
+            @media @tablet {
+                justify-content: space-evenly;
+                width: 100%;
+            }
+
+            a {
+                color: @nav-font;
+
+                &:hover {
+                    color: @main-font-color;
+                }
+            } // links
+        } //nav-bar 
+} // nav
